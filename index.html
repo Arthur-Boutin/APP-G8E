@@ -3,126 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Produits</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <title>Votre Site Web</title>
+  <link rel="stylesheet" href="style.css"> </head>
 <body>
-  <!-- Ici sera injecté le HEADER -->
-  <div id="header"></div>
-  <!-- header.html -->
-<header class="header">
-    <div class="logo">NUTWORK</div>
-    <nav class="nav">
-      <a href="contact.html">Contact</a>
-      <a href="articles.html">Nos Articles</a>
-      <a href="galerie.html">Galerie</a>
-    </nav>
-    <div class="search-container">
-      <input type="text" placeholder="">
-      <button class="search-btn">☰</button>
-    </div>
-    <div class="icons">
-      <img src="icons/Mail.png" alt="Mail">
-      <img src="icons/truc.png" alt="Message">
-      <img src="icons/Profil.png" alt="User">
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">NUTWORK</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Nos articles</a></li>
+          <li><a href="#">À propos</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher...">
+        <button type="submit">🔍</button>
+      </div>
+      <div class="user-actions">
+        <button>👤</button>
+      </div>
     </div>
   </header>
 
-  <main class="page-section">
-    <!-- Contenu de la page -->
-    <section class="hero"></section>
-
-    <section class="produits-section">
-      <div class="produit-header">
-        <div class="produit-image">
-          <img src="icons/image-placeholder.svg" alt="Produit">
+  <main class="main-content">
+    <div class="section-principale">
+      <div class="contenu-principal">
+        <div class="image-principale">
+          <img src="chemin/vers/votre/image.jpg" alt="Description de l'image">
         </div>
-        <div class="produit-infos">
-          <h2>Text Heading</h2>
+        <div class="informations-principales">
+          <h2>Titre du texte</h2>
           <div class="filtres">
-            <label for="couleur">Couleur</label>
-            <select id="couleur">
-              <option value="marron">Marron</option>
-            </select>
-            <label for="size">Size</label>
-            <select id="size">
-              <option value="m">M</option>
-            </select>
+            <h3>Trier et Filtrer</h3>
+            <div class="selecteurs">
+              <select name="categorie">
+                <option value="">Catégorie</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+              </select>
+              <select name="tri">
+                <option value="">Trier par</option>
+                <option value="populaire">Populaire</option>
+                <option value="recent">Récent</option>
+              </select>
+              <button>Filtrer</button>
+            </div>
           </div>
-          <label for="description">Description :</label>
-          <textarea id="description">Ajouter une description assez simple ici ou exemple placeholder.</textarea>
+          <div class="avis-rapide">
+            <p>Texte court décrivant rapidement quelque chose.</p>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="avis-section">
-      <h2>Avis</h2>
-      <div class="avis-container">
-        <div class="avis-card">
-          <p>★★★★☆</p>
-          <h4>Review title</h4>
-          <p>Review text</p>
-          <p class="auteur">Reviewer name</p>
-        </div>
-        <div class="avis-card">
-          <p>★★★☆☆</p>
-          <h4>Review title</h4>
-          <p>Review text</p>
-          <p class="auteur">Reviewer name</p>
-        </div>
-        <div class="avis-card">
-          <p>★★★★★</p>
-          <h4>Review title</h4>
-          <p>Review text</p>
-          <p class="auteur">Reviewer name</p>
+      <div class="section-avis">
+        <h2>Avis</h2>
+        <div class="liste-avis">
+          <div class="avis-bloc">
+            <div class="etoiles">
+              <span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span>
+            </div>
+            <h3>Titre de l'avis</h3>
+            <p class="auteur-avis">Nom de l'auteur</p>
+            <p class="texte-avis">Un court extrait de l'avis.</p>
+          </div>
+          <div class="avis-bloc">
+            <div class="etoiles">
+              <span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span>
+            </div>
+            <h3>Titre de l'avis</h3>
+            <p class="auteur-avis">Nom de l'auteur</p>
+            <p class="texte-avis">Un court extrait de l'avis.</p>
+          </div>
+          <div class="avis-bloc">
+            <div class="etoiles">
+              <span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span>
+            </div>
+            <h3>Titre de l'avis</h3>
+            <p class="auteur-avis">Nom de l'auteur</p>
+            <p class="texte-avis">Un court extrait de l'avis.</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
-  <!-- Ici sera injecté le FOOTER -->
-  <div id="footer"></div>
-<!-- footer.html -->
-<footer class="footer">
-    <div class="footer-left">
-      <a href="#"><img src="icons/x.svg" alt="X"></a>
-      <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="icons/youtube.svg" alt="YouTube"></a>
-      <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
-    </div>
-    <div class="footer-columns">
-      <div class="column">
-        <h4>À propos de Nutwork</h4>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>À propos de nous</h3>
         <ul>
-          <li><a href="#">À propos de nous</a></li>
-          <li><a href="#">Contactez-nous</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#">Notre histoire</a></li>
+          <li><a href="#">Équipe</a></li>
+          <li><a href="#">Carrières</a></li>
+          <li><a href="#">Avis clients</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Nos produits et services</h3>
+        <ul>
+          <li><a href="#">Catégorie 1</a></li>
+          <li><a href="#">Catégorie 2</a></li>
+          <li><a href="#">Catégorie 3</a></li>
+          <li><a href="#">Fonctionnalité A</a></li>
+          <li><a href="#">Fonctionnalité B</a></li>
+          <li><a href="#">Tarifs</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Mention légal</a></li>
-          <li><a href="#">CGU</a></li>
         </ul>
       </div>
-      <div class="column">
-        <h4>Nos secteurs d'activités</h4>
-        <ul>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Prototyping</a></li>
-          <li><a href="#">Development features</a></li>
-          <li><a href="#">Design systems</a></li>
-          <li><a href="#">Collaboration features</a></li>
-          <li><a href="#">Design process</a></li>
-          <li><a href="#">FigJam</a></li>
-        </ul>
+      <div class="footer-column">
+        <h3>Aide & Contact</h3>
+        <p>123 Rue de la Technologie</p>
+        <p>75000 Paris, France</p>
+        <p>Email: contact@votresite.com</p>
+        <p>Téléphone: +33 1 23 45 67 89</p>
       </div>
-      <div class="column">
-        <h4>Aide & Contacts</h4>
-        <ul>
-          <li>contact@nutwork.com</li>
-          <li>Best practices</li>
-          <li>28 Rue Notre Dame des Champs, 75006 Paris</li>
-        </ul>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><img></a>
+        <a href="#" aria-label="Twitter"><img></a>
+        <a href="#" aria-label="Instagram"><img></a>
+        <a href="#" aria-label="LinkedIn"><img></a>
       </div>
     </div>
   </footer>
+
 </body>
 </html>

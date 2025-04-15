@@ -1,208 +1,329 @@
-/* ---------- RESET BASIQUE ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Styles pour l'en-tête (Header) */
+.site-header {
+  background-color: #333;
+  color: #FFF;
+  padding: 15px 20px;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.5;
-  background-color: #f3d4aa;
-  color: #000;
-}
-
-/* ---------- HEADER ---------- */
-header {
-  background-color: #9A6130;
+.header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1em 2em;
-  color: white;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2em;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  background-color: #eee6f8;
-  border-radius: 2em;
-  padding: 0.3em 1em;
-}
-
-.search-container input {
-  border: none;
-  background: none;
-  outline: none;
-  margin-left: 0.5em;
-}
-
-.icons-header {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-
-.icons-header img {
-  width: 24px;
-  height: 24px;
-}
-
-/* ---------- SECTION HERO (bande beige) ---------- */
-.hero {
-  height: 300px;
-  background-color: #f3d4aa;
-}
-
-/* ---------- SECTION PRODUIT ---------- */
-.produits-section {
-  background-color: #9A6130;
-  color: white;
-  padding: 2em;
-  display: flex;
-  justify-content: center;
-}
-
-.produit-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.produit-image img {
-  width: 200px;
-  height: auto;
-  background-color: #ccc;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-.produit-infos {
-  flex: 1;
-  min-width: 250px;
-}
-
-.filtres {
-  margin: 1em 0;
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.filtres label {
-  font-weight: bold;
-}
-
-.filtres select {
-  padding: 0.5em;
-  border-radius: 5px;
-  border: none;
-}
-
-textarea {
-  width: 100%;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: none;
-  resize: vertical;
-}
-
-/* ---------- SECTION AVIS ---------- */
-.avis-section {
-  background-color: #f3d4aa;
-  padding: 2em;
-}
-
-.avis-section h2 {
   font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-.avis-container {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-
-.avis-card {
-  background: white;
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  width: 250px;
-  min-height: 150px;
-  color: black;
-}
-
-.avis-card .auteur {
-  font-style: italic;
-  margin-top: 0.5em;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  background-color: #9A6130;
-  color: white;
-  padding: 2em;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-.footer-section {
-  min-width: 200px;
-}
-
-.footer-section h4 {
   font-weight: bold;
-  margin-bottom: 1em;
 }
 
-.footer-section ul {
+.main-nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
-.footer-section ul li {
-  margin-bottom: 0.5em;
-}
-
-.footer-section ul li a {
-  color: white;
+.main-nav a {
+  color: #FFF;
   text-decoration: none;
 }
 
-.footer-socials {
-  display: flex;
-  gap: 1em;
-  margin-bottom: 1em;
+.main-nav a:hover {
+  color: #CCC;
 }
 
-.footer-socials img {
+.search-bar {
+  display: flex;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 0.9em;
+}
+
+.search-bar button[type="submit"] {
+  background-color: #555;
+  color: #FFF;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.search-bar button[type="submit"]:hover {
+  background-color: #666;
+}
+
+.user-actions button {
+  background: none;
+  color: #FFF;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.user-actions button:hover {
+  color: #CCC;
+}
+
+/* Styles pour le contenu principal (Main Content) */
+.main-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.section-principale {
+  background-color: #F5F5DC;
+  padding: 20px;
+}
+
+.contenu-principal {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.image-principale {
+  flex: 0 0 40%;
+}
+
+.image-principale img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background-color: #DDD;
+  padding: 50px;
+  text-align: center;
+  color: #888;
+}
+
+.informations-principales {
+  flex: 1;
+}
+
+.informations-principales h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Styles pour les filtres */
+.filtres {
+  margin-bottom: 20px;
+}
+
+.filtres h3 {
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.selecteurs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.selecteurs select {
+  padding: 8px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.selecteurs button {
+  padding: 8px 15px;
+  background-color: #DDD;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.selecteurs button:hover {
+  background-color: #CCC;
+}
+
+/* Styles pour l'avis rapide */
+.avis-rapide {
+  background-color: #FFF;
+  border: 1px solid #EEE;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Styles pour la section des avis */
+.section-avis {
+  padding: 20px;
+}
+
+.section-avis h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.liste-avis {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.avis-bloc {
+  background-color: #FFF;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  padding: 15px;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+.avis-bloc .etoiles {
+  color: gold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.avis-bloc h3 {
+  color: #444;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.avis-bloc .auteur-avis {
+  color: #777;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.avis-bloc .texte-avis {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Styles pour le pied de page (Footer) */
+.site-footer {
+  background-color: #333;
+  color: #FFF;
+  padding: 40px 20px;
+  font-size: 0.9em;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h3 {
+  color: #FFF;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #FFF;
+}
+
+.footer-column p {
+  line-height: 1.6;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-social a {
+  display: block;
+}
+
+.footer-social img {
   width: 24px;
   height: 24px;
+  opacity: 0.7;
+}
+
+.footer-social a:hover img {
+  opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-bar input[type="text"] {
+    width: calc(100% - 40px); /* Ajustement pour le bouton */
+  }
+  .contenu-principal {
+    flex-direction: column;
+  }
+  .image-principale {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .liste-avis {
+    flex-direction: column;
+  }
+  .avis-bloc {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-column {
+    margin-bottom: 30px;
+  }
 }
