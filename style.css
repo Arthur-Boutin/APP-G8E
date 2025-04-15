@@ -1,109 +1,77 @@
-/*style.css*/ 
+/* ---------- RESET BASIQUE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  background-color: #f3d4aa;
+  color: #000;
 }
 
-.header, .footer {
+/* ---------- HEADER ---------- */
+header {
   background-color: #9A6130;
-  color: white;
   display: flex;
   align-items: center;
-  padding: 1em 2em;
-}
-
-.header {
   justify-content: space-between;
+  padding: 1em 2em;
+  color: white;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 1.3em;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: 600;
-}
-
-.search-container {
-  background: #eee;
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  margin: 0 1em;
-}
-.search-container input {
-  border: none;
-  padding: 0.5em 1em;
-  outline: none;
-}
-.search-btn {
-  background: none;
-  border: none;
   font-size: 1.2em;
-  padding: 0.5em;
-  cursor: pointer;
 }
 
-.icons img {
-  width: 24px;
-  height: 24px;
-  margin-left: 1em;
-}
-
-.footer {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 2em;
-}
-
-.footer-left a {
-  margin-right: 1em;
-}
-
-.footer-columns {
+.nav-links {
   display: flex;
-  gap: 3em;
-  flex-wrap: wrap;
+  gap: 2em;
+  list-style: none;
 }
 
-.column h4 {
-  margin: 0 0 0.5em 0;
+.nav-links a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
-.column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #eee6f8;
+  border-radius: 2em;
+  padding: 0.3em 1em;
 }
 
-.column ul li {
-  margin-bottom: 0.5em;
-  font-size: 0.9em;
+.search-container input {
+  border: none;
+  background: none;
+  outline: none;
+  margin-left: 0.5em;
 }
 
-.column ul li a {
-  color: white;
-  text-decoration: none;
+.icons-header {
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 
-* Page spécifique */
-.page-section {
-  background-color: #f3d4aa;
-  padding-bottom: 2em;
+.icons-header img {
+  width: 24px;
+  height: 24px;
 }
 
+/* ---------- SECTION HERO (bande beige) ---------- */
 .hero {
   height: 300px;
   background-color: #f3d4aa;
 }
 
+/* ---------- SECTION PRODUIT ---------- */
 .produits-section {
   background-color: #9A6130;
   color: white;
@@ -159,6 +127,7 @@ textarea {
   resize: vertical;
 }
 
+/* ---------- SECTION AVIS ---------- */
 .avis-section {
   background-color: #f3d4aa;
   padding: 2em;
@@ -188,4 +157,52 @@ textarea {
 .avis-card .auteur {
   font-style: italic;
   margin-top: 0.5em;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #9A6130;
+  color: white;
+  padding: 2em;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.footer-section {
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5em;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
 }
