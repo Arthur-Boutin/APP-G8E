@@ -1,7 +1,7 @@
 /* Styles pour l'en-tête (Header) */
 .site-header {
-  background-color: #333;
-  color: #FFF;
+  background-color: #F5F5DC; /* Couleur beige clair */
+  color: #333; /* Couleur de texte sombre */
   padding: 15px 20px;
 }
 
@@ -27,12 +27,18 @@
 }
 
 .main-nav a {
-  color: #FFF;
+  color: #333;
   text-decoration: none;
 }
 
 .main-nav a:hover {
-  color: #CCC;
+  color: #555;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .search-bar {
@@ -41,14 +47,14 @@
 
 .search-bar input[type="text"] {
   padding: 8px;
-  border: none;
+  border: 1px solid #CCC;
   border-radius: 5px 0 0 5px;
   font-size: 0.9em;
 }
 
 .search-bar button[type="submit"] {
-  background-color: #555;
-  color: #FFF;
+  background-color: #DDD;
+  color: #333;
   border: none;
   padding: 8px 10px;
   border-radius: 0 5px 5px 0;
@@ -57,20 +63,49 @@
 }
 
 .search-bar button[type="submit"]:hover {
-  background-color: #666;
+  background-color: #CCC;
 }
 
 .user-actions button {
   background: none;
-  color: #FFF;
-  border: none;
+  color: #333;
+  border: 1px solid #CCC;
+  border-radius: 5px;
   font-size: 1.2em;
   cursor: pointer;
   padding: 8px;
 }
 
 .user-actions button:hover {
-  color: #CCC;
+  background-color: #EEE;
+}
+
+.header-images {
+  display: flex;
+  gap: 5px;
+}
+
+.header-images img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Styles pour le carrousel d'images */
+.image-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.slide {
+  display: none; /* Initially hide all slides */
+}
+
+.slide img {
+  width: 100%;
+  display: block;
 }
 
 /* Styles pour le contenu principal (Main Content) */
@@ -80,8 +115,9 @@
   padding: 0 20px;
 }
 
+/* Styles pour la section principale */
 .section-principale {
-  background-color: #F5F5DC;
+  background-color: #F5F5DC; /* Couleur beige clair */
   padding: 20px;
 }
 
@@ -219,8 +255,8 @@
 
 /* Styles pour le pied de page (Footer) */
 .site-footer {
-  background-color: #333;
-  color: #FFF;
+  background-color: #333; /* Couleur de fond sombre */
+  color: #F5F5DC; /* Couleur de texte beige clair */
   padding: 40px 20px;
   font-size: 0.9em;
 }
@@ -239,7 +275,7 @@
 }
 
 .footer-column h3 {
-  color: #FFF;
+  color: #F5F5DC;
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: bold;
@@ -261,7 +297,7 @@
 }
 
 .footer-column a:hover {
-  color: #FFF;
+  color: #F5F5DC;
 }
 
 .footer-column p {
@@ -295,6 +331,10 @@
     align-items: flex-start;
     gap: 15px;
   }
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .main-nav ul {
     flex-direction: column;
     gap: 10px;
@@ -303,7 +343,7 @@
     width: 100%;
   }
   .search-bar input[type="text"] {
-    width: calc(100% - 40px); /* Ajustement pour le bouton */
+    width: calc(100% - 40px);
   }
   .contenu-principal {
     flex-direction: column;
@@ -326,4 +366,22 @@
   .footer-column {
     margin-bottom: 30px;
   }
+}
+
+/* Styles pour le carrousel (JavaScript sera nécessaire pour l'animation) */
+.image-slider {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
 }
