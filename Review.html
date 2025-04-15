@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Reviews - Nutwork</title>
+  <style>
+    /* ------------------- Reset & Global ------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7E3C2;
+      color: #3A2A1B;
+      line-height: 1.4;
+    }
+
+    /* ------------------- Header (identique) ------------------- */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #8C5A2B;
+      padding: 10px 20px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 30px;
+    }
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-icons a {
+      margin-left: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* ------------------- Main Content (Reviews) ------------------- */
+    .reviews-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .reviews-container h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #8C5A2B;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .review-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .star-rating {
+      color: #FFA500;
+      margin-bottom: 10px;
+    }
+    .review-card h3 {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .review-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    .review-author {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .review-date {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    /* ------------------- Footer (identique) ------------------- */
+    .footer {
+      background-color: #8C5A2B;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 40px;
+      margin-top: 40px;
+    }
+    .footer-col {
+      flex: 1;
+      margin: 0 10px;
+    }
+    .footer-col h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    .footer-col a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+    .footer-col p {
+      margin-bottom: 5px;
+    }
+    .social-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header class="main-header">
+  <div class="header-left">
+    <div class="logo">NUTWORK</div>
+    <nav class="nav-menu">
+      <a href="#">Contact</a>
+      <a href="#">Nos Articles</a>
+      <a href="#">Galerie</a>
+    </nav>
+  </div>
+  <div class="header-right">
+    <div class="nav-icons">
+      <a href="#">🔍</a>
+      <a href="#">✉️</a>
+      <a href="#">👤</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main: Avis / Reviews -->
+<div class="reviews-container">
+  <h1>Reviews</h1>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="star-rating">★★★★★</div>
+      <h3>Review title</h3>
+      <p>Review body</p>
+      <div class="review-author">Reviewer name</div>
+      <div class="review-date">Date</div>
+    </div>
+    <div class="review-card">
+      <div class="star-rating">★★★★☆</div>
+      <h3>Review title</h3>
+      <p>Review body</p>
+      <div class="review-author">Reviewer name</div>
+      <div class="review-date">Date</div>
+    </div>
+    <div class="review-card">
+      <div class="star-rating">★★★☆☆</div>
+      <h3>Review title</h3>
+      <p>Review body</p>
+      <div class="review-author">Reviewer name</div>
+      <div class="review-date">Date</div>
+    </div>
+    <div class="review-card">
+      <div class="star-rating">★★★★★</div>
+      <h3>Review title</h3>
+      <p>Review body</p>
+      <div class="review-author">Reviewer name</div>
+      <div class="review-date">Date</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-col">
+    <h3>À propos de Nutwork</h3>
+    <a href="#">À propos de nous</a>
+    <a href="#">Contactez-nous</a>
+    <a href="#">Blog</a>
+    <a href="#">FAQ</a>
+    <a href="#">Mention légal</a>
+    <a href="#">CGU</a>
+  </div>
+  <div class="footer-col">
+    <h3>Nos secteurs d’activités</h3>
+    <a href="#">Design</a>
+    <a href="#">Prototyping</a>
+    <a href="#">Development features</a>
+    <a href="#">Design systems</a>
+    <a href="#">Collaboration features</a>
+    <a href="#">Design process</a>
+    <a href="#">FigJam</a>
+  </div>
+  <div class="footer-col">
+    <h3>Aide & Contacts</h3>
+    <p>contact@nutwork.com</p>
+    <p>Best practices</p>
+    <p>28 Rue Notre Dame des Champs, 75006 Paris</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

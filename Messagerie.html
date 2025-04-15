@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages - Nutwork</title>
+  <style>
+    /* ========== 全局初始化 & 页面背景 ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7E3C2; /* 米黄色背景 */
+      color: #3A2A1B;           /* 深棕文字 */
+      line-height: 1.4;
+    }
+
+    /* ========== 顶部导航 ========== */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #8C5A2B; /* 深棕 */
+      padding: 10px 20px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 30px;
+    }
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+    .menu-toggle {
+      display: none; /* 如果不需要汉堡菜单交互可隐藏 */
+      background: none;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-icons a {
+      margin-left: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* ========== 聊天界面主体 ========== */
+    .chat-container {
+      max-width: 1200px;   /* 保持原宽度 */
+      margin: 20px auto 40px;
+      padding: 0 20px;
+      display: flex;
+      /* 让容器变得更“长” */
+      min-height: 700px;   /* 你可以改大一些，如 800px 或 80vh */
+    }
+
+    /* 侧边栏：会话列表 */
+    .chat-sidebar {
+      width: 25%;            /* 原侧边栏宽度 */
+      background-color: #F0D2A1;
+      border-radius: 8px;
+      padding: 20px;
+      margin-right: 20px;
+    }
+    .chat-sidebar h2 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #8C5A2B;
+    }
+    .search-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .conversation-item {
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .conversation-item:hover {
+      background-color: #f8f4ee;
+    }
+    .conversation-name {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .conversation-preview {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .conversation-item.selected {
+      border: 2px solid #8C5A2B;
+    }
+
+    /* 右侧：聊天主区域 */
+    .chat-main {
+      flex: 1;
+      background-color: #fff;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    /* 聊天顶部 - 联系人名称 */
+    .chat-header {
+      padding: 15px 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      background-color: #F0D2A1;
+    }
+    /* 聊天消息区域 */
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      background-color: #FAF4EC;
+      overflow-y: auto; /* 若消息很多，可滚动 */
+    }
+    .message {
+      max-width: 60%;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      position: relative;
+      clear: both;
+    }
+    /* 左侧气泡 */
+    .message.left {
+      background-color: #D9F1FF; /* 浅蓝 */
+      float: left;
+    }
+    /* 右侧气泡 */
+    .message.right {
+      background-color: #D9FFD9; /* 浅绿 */
+      float: right;
+    }
+    /* 聊天输入框 */
+    .chat-input {
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      background-color: #F0D2A1;
+    }
+    .chat-input textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: none;
+      font-size: 1rem;
+    }
+    .chat-input textarea:focus {
+      outline: none;
+      border-color: #8C5A2B;
+    }
+
+    /* ========== 页脚 ========== */
+    .footer {
+      background-color: #8C5A2B;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 40px;
+    }
+    .footer-col {
+      flex: 1;
+      margin: 0 10px;
+    }
+    .footer-col h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    .footer-col a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+    .footer-col p {
+      margin-bottom: 5px;
+    }
+    .social-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* ========== 响应式(可选) ========== */
+    @media(max-width: 768px) {
+      .chat-container {
+        flex-direction: column;
+        min-height: auto; /* 移动端可让其自适应高度 */
+      }
+      .chat-sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .chat-main {
+        width: 100%;
+      }
+      .menu-toggle {
+        display: inline-block;
+      }
+      .nav-menu {
+        display: none; /* 如果真正想做移动端菜单，可结合JS控制显示 */
+      }
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-col {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- 顶部导航 -->
+<header class="main-header">
+  <div class="header-left">
+    <div class="logo">NUTWORK</div>
+    <nav class="nav-menu">
+      <a href="#">Contact</a>
+      <a href="#">Nos Articles</a>
+      <a href="#">Galerie</a>
+    </nav>
+  </div>
+  <div class="header-right">
+    <button class="menu-toggle">&#9776;</button>
+    <div class="nav-icons">
+      <a href="#" class="icon-search">🔍</a>
+      <a href="#" class="icon-mail">✉️</a>
+      <a href="#" class="icon-user">👤</a>
+    </div>
+  </div>
+</header>
+
+<!-- 聊天主体 -->
+<div class="chat-container">
+  <!-- 左边：会话列表 -->
+  <div class="chat-sidebar">
+    <h2>Conversations</h2>
+    <input type="text" class="search-input" placeholder="Rechercher..."/>
+
+    <div class="conversation-item">
+      <p class="conversation-name">Jean Dupont</p>
+      <p class="conversation-preview">Salut, ça va ?</p>
+    </div>
+    <div class="conversation-item selected">
+      <p class="conversation-name">Marie Curie</p>
+      <p class="conversation-preview">À demain !</p>
+    </div>
+  </div>
+
+  <!-- 右边：聊天消息 -->
+  <div class="chat-main">
+    <div class="chat-header">Marie Curie</div>
+
+    <div class="chat-messages">
+      <!-- 两条示例消息 -->
+      <div class="message left">
+        <p>Salut Marie !</p>
+      </div>
+      <div class="message right">
+        <p>Salut Jean !</p>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <textarea rows="2" placeholder="Écrivez un message..."></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- 底部 -->
+<footer class="footer">
+  <div class="footer-col">
+    <h3>À propos de Nutwork</h3>
+    <a href="#">À propos de nous</a>
+    <a href="#">Contactez-nous</a>
+    <a href="#">Blog</a>
+    <a href="#">FAQ</a>
+    <a href="#">Mention légal</a>
+    <a href="#">CGU</a>
+  </div>
+  <div class="footer-col">
+    <h3>Nos secteurs d’activités</h3>
+    <a href="#">Design</a>
+    <a href="#">Prototyping</a>
+    <a href="#">Development features</a>
+    <a href="#">Design systems</a>
+    <a href="#">Collaboration features</a>
+    <a href="#">Design process</a>
+    <a href="#">FigJam</a>
+  </div>
+  <div class="footer-col">
+    <h3>Aide & Contacts</h3>
+    <p>contact@nutwork.com</p>
+    <p>Best practices</p>
+    <p>28 Rue Notre Dame des Champs, 75006 Paris</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
