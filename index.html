@@ -1,101 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <meta charset="UTF-8">
- <title>Accueil - Nutwork</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Avis - NATWORK</title>
+    <link rel="stylesheet" href="ton-style.css"> <!-- Ton fichier CSS -->
 </head>
 <body>
 
-<header class="main-header">
- <div class="header-left">
-  <button class="menu-toggle">&#9776;</button>
-  <div class="logo">NUTWORK</div>
-  <nav class="nav-menu">
-   <a href="#">Contact</a>
-   <a href="#">Nos Articles</a>
-   <a href="#">Galerie</a>
-  </nav>
- </div>
- <div class="header-right">
-  <div class="nav-icons">
-   <a href="#">🔍</a>
-   <a href="#">✉️</a>
-   <a href="#">👤</a>
-  </div>
- </div>
-</header>
+  <header class="main-header">
+    <div class="header-left">
+      <div class="logo">NUTWORK</div>
+      <nav class="nav-menu">
+        <a href="#">Contact</a>
+        <a href="#">Nos Articles</a>
+        <a href="#">Galerie</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <div class="nav-icons">
+        <a href="#">🔍</a>
+        <a href="#">✉️</a>
+        <a href="#">👤</a>
+      </div>
+    </div>
+  </header>
 
-<main class="home-container">
- <section class="hero-section">
-  <h1>Bienvenue chez Nutwork</h1>
-  <p>Votre plateforme pour découvrir et partager des idées créatives.</p>
-  <a href="#" class="btn-primary">Explorez nos articles</a>
- </section>
+    <!-- Carrousel d'images -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+                <img src="image4.jpg" alt="Image 4">
+            </div>
+        </div>
+    </section>
 
- <section class="featured-articles">
-  <h2>Articles Populaires</h2>
-  <div class="article-grid">
-   <div class="article-card">
-    <img src="placeholder-image.jpg" alt="Article 1">
-    <h3>Titre de l'article 1</h3>
-    <p>Courte description de l'article 1.</p>
-    <a href="#" class="read-more">Lire la suite</a>
-   </div>
-   <div class="article-card">
-    <img src="placeholder-image.jpg" alt="Article 2">
-    <h3>Titre de l'article 2</h3>
-    <p>Courte description de l'article 2.</p>
-    <a href="#" class="read-more">Lire la suite</a>
-   </div>
-   <div class="article-card">
-    <img src="placeholder-image.jpg" alt="Article 3">
-    <h3>Titre de l'article 3</h3>
-    <p>Courte description de l'article 3.</p>
-    <a href="#" class="read-more">Lire la suite</a>
-   </div>
-  </div>
- </section>
+    <!-- Zone de filtre et tri -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="image-placeholder">
+                <img src="placeholder.jpg" alt="Image Placeholder">
+            </div>
+            <div class="filter-controls">
+                <h2>Text Heading</h2>
+                <div class="filter-row">
+                    <label for="collection">Trier et Filter</label>
+                    <select id="collection">
+                        <option value="all">All</option>
+                        <option value="value1">Valeur 1</option>
+                        <option value="value2">Valeur 2</option>
+                    </select>
+                </div>
+                <div class="filter-row">
+                    <label for="prix">Prix</label>
+                    <select id="prix">
+                        <option value="all">Tous les prix</option>
+                        <option value="low">Moins cher</option>
+                        <option value="high">Plus cher</option>
+                    </select>
+                </div>
+                <div class="filter-row">
+                    <label for="tri">Tri</label>
+                    <select id="tri">
+                        <option value="pertinence">Trier par pertinence</option>
+                        <option value="nouveau">Nouveautés</option>
+                        <option value="avis">Meilleurs avis</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <section class="call-to-action">
-  <h2>Rejoignez notre communauté</h2>
-  <p>Inscrivez-vous pour ne rien manquer de nos dernières actualités et créations.</p>
-  <button class="btn-secondary">S'inscrire</button>
- </section>
-</main>
+    <!-- Section Avis -->
+    <section class="avis-section">
+        <h2 class="page-title">Avis</h2>
+        <div class="avis-list">
+            <div class="avis-card">
+                <p>★★★★★</p>
+                <h3>Review title</h3>
+                <p>Reviewer name</p>
+                <p>Date</p>
+            </div>
+            <div class="avis-card">
+                <p>★★★★★</p>
+                <h3>Review title</h3>
+                <p>Reviewer name</p>
+                <p>Date</p>
+            </div>
+            <div class="avis-card">
+                <p>★★★★★</p>
+                <h3>Review title</h3>
+                <p>Reviewer name</p>
+                <p>Date</p>
+            </div>
+        </div>
+    </section>
 
-<footer class="footer">
- <div class="footer-col">
-  <h3>À propos de Nutwork</h3>
-  <a href="#">À propos de nous</a>
-  <a href="#">Contactez-nous</a>
-  <a href="#">Blog</a>
-  <a href="#">FAQ</a>
-  <a href="#">Mention légale</a>
-  <a href="#">CGU</a>
- </div>
- <div class="footer-col">
-  <h3>Nos secteurs d’activités</h3>
-  <a href="#">Design</a>
-  <a href="#">Prototyping</a>
-  <a href="#">Development features</a>
-  <a href="#">Design systems</a>
-  <a href="#">Collaboration features</a>
-  <a href="#">Design process</a>
-  <a href="#">FigJam</a>
- </div>
- <div class="footer-col">
-  <h3>Aide & Contacts</h3>
-  <p>contact@nutwork.com</p>
-  <p>Meilleures pratiques</p>
-  <p>28 Rue Notre Dame des Champs, 75006 Paris</p>
-  <div class="social-links">
-   <a href="#">Instagram</a>
-   <a href="#">YouTube</a>
-   <a href="#">LinkedIn</a>
-  </div>
- </div>
-</footer>
+    <footer class="footer">
+      <div class="footer-col">
+        <h3>À propos de Nutwork</h3>
+        <a href="#">À propos de nous</a>
+        <a href="#">Contactez-nous</a>
+        <a href="#">Blog</a>
+        <a href="#">FAQ</a>
+        <a href="#">Mention légal</a>
+        <a href="#">CGU</a>
+      </div>
+      <div class="footer-col">
+        <h3>Nos secteurs d’activités</h3>
+        <a href="#">Design</a>
+        <a href="#">Prototyping</a>
+        <a href="#">Development features</a>
+        <a href="#">Design systems</a>
+        <a href="#">Collaboration features</a>
+        <a href="#">Design process</a>
+        <a href="#">FigJam</a>
+      </div>
+      <div class="footer-col">
+        <h3>Aide & Contacts</h3>
+        <p>contact@nutwork.com</p>
+        <p>Best practices</p>
+        <p>28 Rue Notre Dame des Champs, 75006 Paris</p>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>
