@@ -1,9 +1,8 @@
 /* Styles pour l'en-tête (Header) */
 .site-header {
-  background-color: #F2F2F2; /* Gris clair de l'en-tête */
-  color: #333; /* Couleur de texte sombre */
+  background-color: #955D33; /* Marron foncé de l'en-tête */
+  color: #F5D7B1; /* Beige clair du texte de l'en-tête */
   padding: 15px 20px;
-  border-bottom: 1px solid #E0E0E0; /* Bordure inférieure légère */
 }
 
 .header-container {
@@ -17,7 +16,7 @@
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: #E6492D; /* Couleur orange du logo (si visible) */
+  color: #FFFFFF; /* Blanc du logo */
 }
 
 .main-nav ul {
@@ -29,12 +28,12 @@
 }
 
 .main-nav a {
-  color: #555; /* Couleur des liens de navigation */
+  color: #F5D7B1; /* Beige clair des liens de navigation */
   text-decoration: none;
 }
 
 .main-nav a:hover {
-  color: #E6492D; /* Couleur orange au survol */
+  color: #FFFFFF; /* Blanc au survol */
 }
 
 .header-right {
@@ -45,14 +44,16 @@
 
 .search-bar {
   display: flex;
+  background-color: #FFFFFF; /* Fond blanc de la barre de recherche */
+  border-radius: 5px;
 }
 
 .search-bar input[type="text"] {
   padding: 8px;
-  border: 1px solid #CCC;
+  border: none;
   border-radius: 5px 0 0 5px;
   font-size: 0.9em;
-  color: #333;
+  color: #333; /* Texte sombre de la recherche */
 }
 
 .search-bar button[type="submit"] {
@@ -71,8 +72,8 @@
 
 .user-actions button {
   background: none;
-  color: #555;
-  border: 1px solid #CCC;
+  color: #F5D7B1;
+  border: 1px solid #F5D7B1;
   border-radius: 5px;
   font-size: 1.2em;
   cursor: pointer;
@@ -80,7 +81,8 @@
 }
 
 .user-actions button:hover {
-  background-color: #EEE;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .header-images {
@@ -100,8 +102,8 @@
   overflow: hidden;
   width: 100%;
   margin-bottom: 20px;
-  background-color: #F9F9F9; /* Fond très clair pour le slider */
-  padding: 20px; /* Espace autour des images du slider */
+  background-color: #F5D7B1; /* Beige clair pour le fond du slider */
+  padding: 20px;
 }
 
 .slide {
@@ -111,8 +113,9 @@
 .slide img {
   width: 100%;
   display: block;
-  border: 1px solid #E0E0E0; /* Bordure légère pour les images du slider */
   border-radius: 5px;
+  object-fit: cover;
+  max-height: 300px; /* Hauteur maximale du slider */
 }
 
 .slide.active {
@@ -128,9 +131,8 @@
 
 /* Styles pour la section principale */
 .section-principale {
-  background-color: #F9F9F9; /* Fond gris très clair */
+  background-color: #F5D7B1; /* Beige clair du fond */
   padding: 20px;
-  border: 1px solid #E0E0E0; /* Bordure légère autour de la section */
   border-radius: 5px;
 }
 
@@ -142,7 +144,7 @@
 
 .image-principale {
   flex: 0 0 40%;
-  background-color: #E0E0E0; /* Couleur de fond de l'image placeholder */
+  background-color: #E0E0E0; /* Gris clair du placeholder */
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -156,6 +158,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .informations-principales {
@@ -163,7 +166,7 @@
 }
 
 .informations-principales h2 {
-  color: #333;
+  color: #955D33; /* Marron foncé du titre */
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -174,7 +177,7 @@
 }
 
 .filtres h3 {
-  color: #555;
+  color: #955D33; /* Marron foncé du titre des filtres */
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1em;
@@ -193,7 +196,7 @@
   border-radius: 5px;
   font-size: 0.9em;
   color: #333;
-  background-color: #FFF;
+  background-color: #FFFFFF;
 }
 
 .selecteurs button {
@@ -212,7 +215,7 @@
 
 /* Styles pour l'avis rapide */
 .avis-rapide {
-  background-color: #FFF;
+  background-color: #FFFFFF; /* Fond blanc */
   border: 1px solid #E0E0E0;
   padding: 15px;
   border-radius: 5px;
@@ -226,7 +229,7 @@
 }
 
 .section-avis h2 {
-  color: #333;
+  color: #955D33; /* Marron foncé du titre "Avis" */
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -238,8 +241,8 @@
 }
 
 .avis-bloc {
-  background-color: #FFF;
-  border: 1px solid #E0E0E0;
+  background-color: #FFFFFF; /* Fond blanc des blocs d'avis */
+  border: 1px solid #F9F9F9; /* Bordure très claire */
   border-radius: 5px;
   padding: 15px;
   width: calc(33.33% - 20px);
@@ -253,7 +256,7 @@
 }
 
 .avis-bloc h3 {
-  color: #444;
+  color: #955D33; /* Marron foncé du titre de l'avis */
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 1em;
@@ -274,8 +277,8 @@
 
 /* Styles pour le pied de page (Footer) */
 .site-footer {
-  background-color: #333; /* Couleur de fond sombre */
-  color: #F2F2F2; /* Gris clair du texte */
+  background-color: #955D33; /* Marron foncé du fond */
+  color: #F5D7B1; /* Beige clair du texte */
   padding: 40px 20px;
   font-size: 0.9em;
 }
@@ -294,7 +297,7 @@
 }
 
 .footer-column h3 {
-  color: #F2F2F2;
+  color: #F5D7B1; /* Beige clair des titres */
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: bold;
@@ -311,17 +314,17 @@
 }
 
 .footer-column a {
-  color: #999;
+  color: #CCC; /* Gris clair des liens */
   text-decoration: none;
 }
 
 .footer-column a:hover {
-  color: #F2F2F2;
+  color: #FFFFFF; /* Blanc au survol */
 }
 
 .footer-column p {
   line-height: 1.6;
-  color: #999;
+  color: #CCC; /* Gris clair du texte */
 }
 
 .footer-social {
@@ -332,6 +335,9 @@
 
 .footer-social a {
   display: block;
+  background-color: #955D33; /* Fond marron foncé des icônes */
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .footer-social img {
