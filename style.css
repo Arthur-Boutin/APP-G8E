@@ -3,6 +3,7 @@
   background-color: #955D33; /* Marron foncé de l'en-tête */
   color: #F5D7B1; /* Beige clair du texte de l'en-tête */
   padding: 15px 20px;
+  width: 100%; /* Le header prend toute la largeur */
 }
 
 .header-container {
@@ -10,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centre le contenu à l'intérieur du header */
 }
 
 .logo {
@@ -281,13 +282,14 @@
   color: #F5D7B1; /* Beige clair du texte */
   padding: 40px 20px;
   font-size: 0.9em;
+  width: 100%; /* Le footer prend toute la largeur */
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centre le contenu à l'intérieur du footer */
   flex-wrap: wrap;
   gap: 20px;
 }
