@@ -1,8 +1,9 @@
 /* Styles pour l'en-tête (Header) */
 .site-header {
-  background-color: #F5F5DC; /* Couleur beige clair */
+  background-color: #F2F2F2; /* Gris clair de l'en-tête */
   color: #333; /* Couleur de texte sombre */
   padding: 15px 20px;
+  border-bottom: 1px solid #E0E0E0; /* Bordure inférieure légère */
 }
 
 .header-container {
@@ -16,6 +17,7 @@
 .logo {
   font-size: 1.5em;
   font-weight: bold;
+  color: #E6492D; /* Couleur orange du logo (si visible) */
 }
 
 .main-nav ul {
@@ -27,12 +29,12 @@
 }
 
 .main-nav a {
-  color: #333;
+  color: #555; /* Couleur des liens de navigation */
   text-decoration: none;
 }
 
 .main-nav a:hover {
-  color: #555;
+  color: #E6492D; /* Couleur orange au survol */
 }
 
 .header-right {
@@ -50,10 +52,11 @@
   border: 1px solid #CCC;
   border-radius: 5px 0 0 5px;
   font-size: 0.9em;
+  color: #333;
 }
 
 .search-bar button[type="submit"] {
-  background-color: #DDD;
+  background-color: #E0E0E0; /* Gris clair du bouton de recherche */
   color: #333;
   border: none;
   padding: 8px 10px;
@@ -68,7 +71,7 @@
 
 .user-actions button {
   background: none;
-  color: #333;
+  color: #555;
   border: 1px solid #CCC;
   border-radius: 5px;
   font-size: 1.2em;
@@ -97,6 +100,8 @@
   overflow: hidden;
   width: 100%;
   margin-bottom: 20px;
+  background-color: #F9F9F9; /* Fond très clair pour le slider */
+  padding: 20px; /* Espace autour des images du slider */
 }
 
 .slide {
@@ -106,6 +111,12 @@
 .slide img {
   width: 100%;
   display: block;
+  border: 1px solid #E0E0E0; /* Bordure légère pour les images du slider */
+  border-radius: 5px;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 /* Styles pour le contenu principal (Main Content) */
@@ -117,8 +128,10 @@
 
 /* Styles pour la section principale */
 .section-principale {
-  background-color: #F5F5DC; /* Couleur beige clair */
+  background-color: #F9F9F9; /* Fond gris très clair */
   padding: 20px;
+  border: 1px solid #E0E0E0; /* Bordure légère autour de la section */
+  border-radius: 5px;
 }
 
 .contenu-principal {
@@ -129,16 +142,20 @@
 
 .image-principale {
   flex: 0 0 40%;
+  background-color: #E0E0E0; /* Couleur de fond de l'image placeholder */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 0.9em;
 }
 
 .image-principale img {
   display: block;
   max-width: 100%;
   height: auto;
-  background-color: #DDD;
-  padding: 50px;
-  text-align: center;
-  color: #888;
+  border-radius: 5px;
 }
 
 .informations-principales {
@@ -175,11 +192,13 @@
   border: 1px solid #CCC;
   border-radius: 5px;
   font-size: 0.9em;
+  color: #333;
+  background-color: #FFF;
 }
 
 .selecteurs button {
   padding: 8px 15px;
-  background-color: #DDD;
+  background-color: #E0E0E0; /* Gris clair du bouton */
   color: #333;
   border: none;
   border-radius: 5px;
@@ -194,11 +213,11 @@
 /* Styles pour l'avis rapide */
 .avis-rapide {
   background-color: #FFF;
-  border: 1px solid #EEE;
+  border: 1px solid #E0E0E0;
   padding: 15px;
   border-radius: 5px;
   font-size: 0.9em;
-  color: #666;
+  color: #555;
 }
 
 /* Styles pour la section des avis */
@@ -220,7 +239,7 @@
 
 .avis-bloc {
   background-color: #FFF;
-  border: 1px solid #EEE;
+  border: 1px solid #E0E0E0;
   border-radius: 5px;
   padding: 15px;
   width: calc(33.33% - 20px);
@@ -256,7 +275,7 @@
 /* Styles pour le pied de page (Footer) */
 .site-footer {
   background-color: #333; /* Couleur de fond sombre */
-  color: #F5F5DC; /* Couleur de texte beige clair */
+  color: #F2F2F2; /* Gris clair du texte */
   padding: 40px 20px;
   font-size: 0.9em;
 }
@@ -275,7 +294,7 @@
 }
 
 .footer-column h3 {
-  color: #F5F5DC;
+  color: #F2F2F2;
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: bold;
@@ -292,16 +311,17 @@
 }
 
 .footer-column a {
-  color: #CCC;
+  color: #999;
   text-decoration: none;
 }
 
 .footer-column a:hover {
-  color: #F5F5DC;
+  color: #F2F2F2;
 }
 
 .footer-column p {
   line-height: 1.6;
+  color: #999;
 }
 
 .footer-social {
