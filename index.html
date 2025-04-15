@@ -1,106 +1,128 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Web</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Produits</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Ici sera injecté le HEADER -->
+  <div id="header"></div>
+  <!-- header.html -->
+<header class="header">
+    <div class="logo">NUTWORK</div>
+    <nav class="nav">
+      <a href="contact.html">Contact</a>
+      <a href="articles.html">Nos Articles</a>
+      <a href="galerie.html">Galerie</a>
+    </nav>
+    <div class="search-container">
+      <input type="text" placeholder="">
+      <button class="search-btn">☰</button>
+    </div>
+    <div class="icons">
+      <img src="icons/mail.svg" alt="Mail">
+      <img src="icons/message.svg" alt="Message">
+      <img src="icons/user.svg" alt="User">
+    </div>
+  </header>
 
-<nav>
-    <ul class="menu">
-        <li><a href="#">NUTWORK</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Nos Articles</a></li>
-        <li><a href="#">Galerie</a></li>
-        <li>
-            <form>
-                <input type="text" name="rechercher" class="barre" placeholder="Rechercher..."/>
-            </form>
-        </li>
-        <li><a href="#"><img alt="Nous contacter" src="Mail.png" class="mail"/></a></li>
-        <li><a href="#"><img src="truc.png" class="truc"></a></li>
-        <li><a href="#"><img src="Profil.png" class="profil"></a></li>
-    </ul>
-</nav>
+  <main class="page-section">
+    <!-- Contenu de la page -->
+    <section class="hero"></section>
 
-<section class="grid">
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-    <div class="card">
-        <div class="image-placeholder"></div>
-        <p>Texte</p>
-        <p><strong>$0</strong></p>
-    </div>
-</section>
+    <section class="produits-section">
+      <div class="produit-header">
+        <div class="produit-image">
+          <img src="icons/image-placeholder.svg" alt="Produit">
+        </div>
+        <div class="produit-infos">
+          <h2>Text Heading</h2>
+          <div class="filtres">
+            <label for="couleur">Couleur</label>
+            <select id="couleur">
+              <option value="marron">Marron</option>
+            </select>
+            <label for="size">Size</label>
+            <select id="size">
+              <option value="m">M</option>
+            </select>
+          </div>
+          <label for="description">Description :</label>
+          <textarea id="description">Ajouter une description assez simple ici ou exemple placeholder.</textarea>
+        </div>
+      </div>
+    </section>
 
-<section class="pagination">
-    <button>&lt; Previous</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>Next &gt;</button>
-</section>
+    <section class="avis-section">
+      <h2>Avis</h2>
+      <div class="avis-container">
+        <div class="avis-card">
+          <p>★★★★☆</p>
+          <h4>Review title</h4>
+          <p>Review text</p>
+          <p class="auteur">Reviewer name</p>
+        </div>
+        <div class="avis-card">
+          <p>★★★☆☆</p>
+          <h4>Review title</h4>
+          <p>Review text</p>
+          <p class="auteur">Reviewer name</p>
+        </div>
+        <div class="avis-card">
+          <p>★★★★★</p>
+          <h4>Review title</h4>
+          <p>Review text</p>
+          <p class="auteur">Reviewer name</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-    <div>
+  <!-- Ici sera injecté le FOOTER -->
+  <div id="footer"></div>
+<!-- footer.html -->
+<footer class="footer">
+    <div class="footer-left">
+      <a href="#"><img src="icons/x.svg" alt="X"></a>
+      <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="icons/youtube.svg" alt="YouTube"></a>
+      <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+    <div class="footer-columns">
+      <div class="column">
         <h4>À propos de Nutwork</h4>
-        <p>À propos de nous</p>
-        <p>Contactez-nous</p>
-        <p>Blog</p>
-        <p>FAQ</p>
-    </div>
-    <div>
+        <ul>
+          <li><a href="#">À propos de nous</a></li>
+          <li><a href="#">Contactez-nous</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Mention légal</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+      <div class="column">
         <h4>Nos secteurs d'activités</h4>
-        <p>Design</p>
-        <p>Prototyping</p>
-        <p>Développement</p>
-    </div>
-    <div>
+        <ul>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Prototyping</a></li>
+          <li><a href="#">Development features</a></li>
+          <li><a href="#">Design systems</a></li>
+          <li><a href="#">Collaboration features</a></li>
+          <li><a href="#">Design process</a></li>
+          <li><a href="#">FigJam</a></li>
+        </ul>
+      </div>
+      <div class="column">
         <h4>Aide & Contacts</h4>
-        <p>contact@nutwork.com</p>
-        <p>28 Rue Notre Dame des Champs, Paris</p>
+        <ul>
+          <li>contact@nutwork.com</li>
+          <li>Best practices</li>
+          <li>28 Rue Notre Dame des Champs, 75006 Paris</li>
+        </ul>
+      </div>
     </div>
-</footer>
-
+  </footer>
 </body>
 </html>
