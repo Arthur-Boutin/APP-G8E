@@ -1,138 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Votre Site Web</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <title>Accueil - Nutwork</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-container">
-      <div class="logo">NUTWORK</div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Nos articles</a></li>
-          <li><a href="#">À propos</a></li>
-        </ul>
-      </nav>
-      <div class="header-right">
-        <div class="search-bar">
-          <input type="text" placeholder="Rechercher...">
-          <button type="submit">🔍</button>
-        </div>
-        <div class="user-actions">
-          <button>👤</button>
-        </div>
-        <div class="header-images">
-          <img src="https://via.placeholder.com/30x30/AAAAAA/FFFFFF?Text=1" alt="Image 1">
-          <img src="https://via.placeholder.com/30x30/BBBBBB/FFFFFF?Text=2" alt="Image 2">
-          <img src="https://via.placeholder.com/30x30/CCCCCC/FFFFFF?Text=3" alt="Image 3">
-        </div>
-      </div>
-    </div>
-  </header>
+<header class="main-header">
+ <div class="header-left">
+  <button class="menu-toggle">&#9776;</button>
+  <div class="logo">NUTWORK</div>
+  <nav class="nav-menu">
+   <a href="#">Contact</a>
+   <a href="#">Nos Articles</a>
+   <a href="#">Galerie</a>
+  </nav>
+ </div>
+ <div class="header-right">
+  <div class="nav-icons">
+   <a href="#">🔍</a>
+   <a href="#">✉️</a>
+   <a href="#">👤</a>
+  </div>
+ </div>
+</header>
 
-  <main class="main-content">
-    <div class="image-slider">
-      <div class="slide"><img src="https://via.placeholder.com/800x300/DDDDDD/000000?Text=Slide+1" alt="Slide 1"></div>
-      <div class="slide"><img src="https://via.placeholder.com/800x300/EEEEEE/000000?Text=Slide+2" alt="Slide 2"></div>
-      <div class="slide"><img src="https://via.placeholder.com/800x300/AAAAAA/FFFFFF?Text=Slide+3" alt="Slide 3"></div>
-    </div>
-    <div class="section-principale">
-      <div class="contenu-principal">
-        <div class="image-principale">
-          <img src="chemin/vers/votre/image.jpg" alt="Description de l'image">
-        </div>
-        <div class="informations-principales">
-          <h2>Titre du texte</h2>
-          <div class="filtres">
-            <h3>Trier et Filtrer</h3>
-            <div class="selecteurs">
-              <select name="categorie">
-                <option value="">Catégorie</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-              </select>
-              <select name="tri">
-                <option value="">Trier par</option>
-                <option value="populaire">Populaire</option>
-                <option value="recent">Récent</option>
-              </select>
-              <button>Filtrer</button>
-            </div>
-          </div>
-          <div class="avis-rapide">
-            <p>Texte court décrivant rapidement quelque chose.</p>
-          </div>
-        </div>
-      </div>
-      <div class="section-avis">
-        <h2>Avis</h2>
-        <div class="liste-avis">
-          <div class="avis-bloc">
-            <div class="etoiles">
-              <span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span>
-            </div>
-            <h3>Review title</h3>
-            <p class="auteur-avis">Reviewer name</p>
-            <p class="texte-avis">A short review excerpt.</p>
-          </div>
-          <div class="avis-bloc">
-            <div class="etoiles">
-              <span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span>
-            </div>
-            <h3>Review title</h3>
-            <p class="auteur-avis">Reviewer name</p>
-            <p class="texte-avis">A short review excerpt.</p>
-          </div>
-          <div class="avis-bloc">
-            <div class="etoiles">
-              <span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span><span class="etoile">☆</span>
-            </div>
-            <h3>Review title</h3>
-            <p class="auteur-avis">Reviewer name</p>
-            <p class="texte-avis">A short review excerpt.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+<main class="home-container">
+ <section class="hero-section">
+  <h1>Bienvenue chez Nutwork</h1>
+  <p>Votre plateforme pour découvrir et partager des idées créatives.</p>
+  <a href="#" class="btn-primary">Explorez nos articles</a>
+ </section>
 
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>A propos de nous</h3>
-        <ul>
-          <li><a href="#">A propos de nous</a></li>
-          <li><a href="#">Notre histoire</a></li>
-          <li><a href="#">Avis clients</a></li>
-          <li><a href="#">Mentions légales</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Nos produits et services</h3>
-        <ul>
-          <li><a href="#">Catégorie 1</a></li>
-          <li><a href="#">Catégorie 2</a></li>
-          <li><a href="#">Catégorie 3</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Aide & Contact</h3>
-        <p>a propos de nous</p>
-        <p>Aide et Contact</p>
-      </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><img src="" alt="Facebook"></a>
-        <a href="#" aria-label="Twitter"><img src="" alt="Twitter"></a>
-        <a href="#" aria-label="Instagram"><img src="" alt="Instagram"></a>
-        <a href="#" aria-label="LinkedIn"><img src="" alt="LinkedIn"></a>
-      </div>
-    </div>
-  </footer>
+ <section class="featured-articles">
+  <h2>Articles Populaires</h2>
+  <div class="article-grid">
+   <div class="article-card">
+    <img src="placeholder-image.jpg" alt="Article 1">
+    <h3>Titre de l'article 1</h3>
+    <p>Courte description de l'article 1.</p>
+    <a href="#" class="read-more">Lire la suite</a>
+   </div>
+   <div class="article-card">
+    <img src="placeholder-image.jpg" alt="Article 2">
+    <h3>Titre de l'article 2</h3>
+    <p>Courte description de l'article 2.</p>
+    <a href="#" class="read-more">Lire la suite</a>
+   </div>
+   <div class="article-card">
+    <img src="placeholder-image.jpg" alt="Article 3">
+    <h3>Titre de l'article 3</h3>
+    <p>Courte description de l'article 3.</p>
+    <a href="#" class="read-more">Lire la suite</a>
+   </div>
+  </div>
+ </section>
+
+ <section class="call-to-action">
+  <h2>Rejoignez notre communauté</h2>
+  <p>Inscrivez-vous pour ne rien manquer de nos dernières actualités et créations.</p>
+  <button class="btn-secondary">S'inscrire</button>
+ </section>
+</main>
+
+<footer class="footer">
+ <div class="footer-col">
+  <h3>À propos de Nutwork</h3>
+  <a href="#">À propos de nous</a>
+  <a href="#">Contactez-nous</a>
+  <a href="#">Blog</a>
+  <a href="#">FAQ</a>
+  <a href="#">Mention légale</a>
+  <a href="#">CGU</a>
+ </div>
+ <div class="footer-col">
+  <h3>Nos secteurs d’activités</h3>
+  <a href="#">Design</a>
+  <a href="#">Prototyping</a>
+  <a href="#">Development features</a>
+  <a href="#">Design systems</a>
+  <a href="#">Collaboration features</a>
+  <a href="#">Design process</a>
+  <a href="#">FigJam</a>
+ </div>
+ <div class="footer-col">
+  <h3>Aide & Contacts</h3>
+  <p>contact@nutwork.com</p>
+  <p>Meilleures pratiques</p>
+  <p>28 Rue Notre Dame des Champs, 75006 Paris</p>
+  <div class="social-links">
+   <a href="#">Instagram</a>
+   <a href="#">YouTube</a>
+   <a href="#">LinkedIn</a>
+  </div>
+ </div>
+</footer>
 
 </body>
 </html>
