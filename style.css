@@ -193,3 +193,128 @@ textarea {
     margin: 5px 0;
   }
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F7D7A7;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #804000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.header-icons i {
+  color: white;
+  margin-left: 1rem;
+}
+
+/* Search bar */
+.search-bar {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 0.8rem 1rem;
+  width: 300px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 0.8rem;
+  background: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product-img {
+  background: #ddd;
+  height: 150px;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pagination button {
+  background: white;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #804000;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #A76630;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  margin: 0.3rem 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: center;
+  width: 100%;
+}
