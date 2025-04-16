@@ -3,90 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catalogue</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Catalogue Nutwork</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="logo">NUTWORK</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Nos Articles</a></li>
-        <li><a href="#">Galerie</a></li>
-      </ul>
-    </nav>
-    <div class="header-icons">
-      <div class="icon-box"></div>
-      <div class="icon-box"></div>
-      <div class="icon-box"></div>
+  <header class="main-header">
+    <div class="header-left">
+      <div class="logo">NUTWORK</div>
+      <nav class="nav-menu">
+        <a href="#">Contact</a>
+        <a href="#">Nos Articles</a>
+        <a href="#">Galerie</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <div class="nav-icons">
+        <a href="#">🔍</a>
+        <a href="#">✉️</a>
+        <a href="#">👤</a>
+      </div>
     </div>
   </header>
 
-  <!-- Barre de recherche -->
-  <section class="search-section">
-    <input type="text" placeholder="Search..." class="search-input">
-  </section>
-
   <!-- Catalogue -->
   <section class="catalog">
+    <!-- Produit -->
     <div class="product-card catalog-item">
       <div class="image-placeholder"></div>
       <h3>Text</h3>
-      <p><strong>50</strong></p>
+      <p><strong>$0</strong></p>
     </div>
-    <!-- 8 autres cards -->
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
-    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>50</strong></p></div>
+    <!-- Répéter pour les 9 produits -->
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+    <div class="product-card catalog-item"><div class="image-placeholder"></div><h3>Text</h3><p><strong>$0</strong></p></div>
+  </section>
+
+  <!-- Barre de recherche -->
+  <section class="search-section">
+    <input type="text" class="search-input" placeholder="Search" />
   </section>
 
   <!-- Pagination -->
   <div class="pagination">
-    <button>&laquo; Previous</button>
+    <button>Previous</button>
     <button class="active">1</button>
-    <button>2</button>
     <button>3</button>
-    <button>Next &raquo;</button>
+    <button>2</button>
+    <button>Next</button>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column">
-        <h4>À propos de Nutwork</h4>
-        <ul>
-          <li><a href="#">À propos de nous</a></li>
-          <li><a href="#">Contactez-nous</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">CGU</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Nos secteurs d'activités</h4>
-        <ul>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Photographie</a></li>
-          <li><a href="#">Développement hardware</a></li>
-          <li><a href="#">Développement software</a></li>
-          <li><a href="#">Collaborations freelances</a></li>
-          <li><a href="#">Projets</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Aide & Contacts</h4>
-        <p>contact@nutwork.com</p>
-        <p>Société passionnée</p>
-        <p>29 Rue Notre Dame des Champs, 75006 Paris</p>
+  <footer class="footer">
+    <div class="footer-col">
+      <h3>À propos de Nutwork</h3>
+      <a href="#">À propos de nous</a>
+      <a href="#">Contactez-nous</a>
+      <a href="#">Blog</a>
+      <a href="#">FAQ</a>
+      <a href="#">Mention légal</a>
+      <a href="#">CGU</a>
+    </div>
+    <div class="footer-col">
+      <h3>Nos secteurs d’activités</h3>
+      <a href="#">Design</a>
+      <a href="#">Prototyping</a>
+      <a href="#">Development features</a>
+      <a href="#">Design systems</a>
+      <a href="#">Collaboration features</a>
+      <a href="#">Design process</a>
+      <a href="#">FigJam</a>
+    </div>
+    <div class="footer-col">
+      <h3>Aide & Contacts</h3>
+      <p>contact@nutwork.com</p>
+      <p>Best practices</p>
+      <p>28 Rue Notre Dame des Champs, 75006 Paris</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
       </div>
     </div>
   </footer>
